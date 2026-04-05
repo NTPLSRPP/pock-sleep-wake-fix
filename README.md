@@ -24,7 +24,7 @@
 This fork by [NTPLSRPP](https://github.com/NTPLSRPP) adds the following fixes on top of the original Pock:
 
 - **Sleep/wake fix** — Touch Bar now restores automatically after Mac wakes from sleep ([pock/pock#648](https://github.com/pock/pock/issues/648))
-- **Better Now Playing widget** — Replaces the original Now Playing widget with [JosephPri's Better Now Playing](https://github.com/JosephPri/Better-Now-Playing-Pock-Widget), which works on macOS 15.4+
+- **Better Now Playing widget** — Recommends [JosephPri's Better Now Playing](https://github.com/JosephPri/Better-Now-Playing-Pock-Widget) as a replacement for the original Now Playing widget on macOS 15.4+ (install manually via Widgets Manager → Install widget)
 
 
 
