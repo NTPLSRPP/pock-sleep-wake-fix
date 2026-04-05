@@ -93,14 +93,21 @@ internal class AppController: NSResponder {
         }.store(in: &disposeBag)
         // listen for `screen is unlocked`
         notificationCenter.publisher(for: .init("com.apple.screenIsUnlocked")).sink { [weak self] _ in
-            self?.isLocked = false
-            if self?.pockTouchBarController?.isVisible == false {
-                Roger.debug("Screen is unlocked. Preparing PockTouchBarController...")
-                TouchBarHelper.markTouchBarAsDimmed(false)
-            } else {
-                Roger.debug("Screen is unlocked. PockTouchBarController is already visible...")
-            }
+            guard let self = self else { return }
+            self.isLocked = false
+            Roger.debug("Screen is unlocked. Reloading PockTouchBarController...")
+            self.reload(shouldFetchLatestVersions: false)
         }.store(in: &disposeBag)
+        // listen for system wake from sleep (handles wake without screen lock)
+        NSWorkspace.shared.notificationCenter
+            .publisher(for: NSWorkspace.didWakeNotification)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                guard let self = self, !self.isLocked else { return }
+                Roger.debug("System woke from sleep. Reloading PockTouchBarController...")
+                self.reload(shouldFetchLatestVersions: false)
+            }
+            .store(in: &disposeBag)
     }
 	
 	/// Clear tmp widgets folder

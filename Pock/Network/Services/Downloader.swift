@@ -101,11 +101,7 @@ internal class Downloader: NSObject, URLSessionTaskDelegate, URLSessionDownloadD
 
 internal class DefaultWidgetsDownloader {
 	
-	#if DEBUG
-	private let defaultWidgetsURLString: String = "https://stage.pock.app/api/defaults.php"
-	#else
-	private let defaultWidgetsURLString: String = "https://pock.app/api/defaults.php"
-	#endif
+	private let defaultWidgetsURLString: String = "https://raw.githubusercontent.com/NTPLSRPP/pock/main/defaults.json"
 	
 	// MARK: Fetch default widgets list
 	
@@ -125,7 +121,7 @@ internal class DefaultWidgetsDownloader {
 				completion([:], .responseError(reason: "Invalid response code"))
 				return
 			}
-			guard httpResponse.mimeType == "application/json", let data = data else {
+			guard let data = data else {
 				completion([:], .responseError(reason: "Invalid response data"))
 				return
 			}

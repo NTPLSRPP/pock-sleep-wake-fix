@@ -19,6 +19,15 @@
 
 
 
+## This fork
+
+This fork by [NTPLSRPP](https://github.com/NTPLSRPP) adds the following fixes on top of the original Pock:
+
+- **Sleep/wake fix** — Touch Bar now restores automatically after Mac wakes from sleep ([pock/pock#648](https://github.com/pock/pock/issues/648))
+- **Better Now Playing widget** — Replaces the original Now Playing widget with [JosephPri's Better Now Playing](https://github.com/JosephPri/Better-Now-Playing-Pock-Widget), which works on macOS 15.4+
+
+
+
 ## Thank you!
 
 If you want to support this project, you can [click here](https://paypal.me/pigigaldi)!
@@ -82,7 +91,18 @@ It now includes multi-window support!
 
 
 
-##### Now Playing widget
+##### Better Now Playing widget
+
+An improved Now Playing widget compatible with macOS 15.4+, created by [JosephPri](https://github.com/JosephPri/Better-Now-Playing-Pock-Widget).
+Replaces the original Now Playing widget with full album art, glow effects, and support for the latest macOS versions.
+
+| Gesture     | Action            |
+| ----------- | :---------------- |
+| tap         | toggle play/pause |
+| swipe left  | previous song     |
+| swipe right | next song         |
+
+##### Now Playing widget (original)
 
 Media information at a glance with gestures for media controls included.
 

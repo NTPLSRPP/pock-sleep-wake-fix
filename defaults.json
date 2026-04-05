@@ -1,0 +1,8 @@
+{
+  "com.pigigaldi.pock.ControlCentre": "https://pock.app/widgets/defaults/0.9.0/ControlCentre.pock.pkarchive",
+  "com.pigigaldi.pock.Dock": "https://pock.app/widgets/defaults/0.9.0/Dock.pock.pkarchive",
+  "com.pigigaldi.pock.Esc": "https://pock.app/widgets/defaults/0.9.0/Esc.pock.pkarchive",
+  "com.pigigaldi.pock.Status": "https://pock.app/widgets/defaults/0.9.0/Status.pock.pkarchive",
+  "com.pigigaldi.pock.Weather": "https://pock.app/widgets/defaults/0.9.0/Weather.pock.pkarchive",
+  "com.josephpri.pock.BetterNowPlaying": "https://github.com/JosephPri/Better-Now-Playing-Pock-Widget/releases/download/V1.03/BNP-Pock-Widget-File.zip"
+}
